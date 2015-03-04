@@ -1,0 +1,14 @@
+Name: Login with Certificate fails because of PKI Problems (#certLoginPubInvalid)
+Testcases: org.cacert.gigi.TestCertificate.testCertLifeCycle()
+Actors: Member, Browser, DB
+Preconditions:
+ - user is not logged in (%loggedin=0)
+ - user owns a certificate that is enabled for login and installed in his browser
+ - the certificate is either, not yet valid, no valid anymore, issued by another CA, wrong KU Flags or revoked
+Short-Description:
+ - the user uses this certificate to login into the secure subdomain, but this fails because the certificate is invalid.
+Description:
+<DIAGRAM,id=certLogin>
+Postconditions:
+ - user is not logged in (%loggedin=1)
+Special cases:

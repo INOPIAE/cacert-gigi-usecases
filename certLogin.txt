@@ -1,0 +1,24 @@
+Name: Login with Certificate (#certLogin)
+Testcases: org.cacert.gigi.TestCertificate.testClientCertLoginStates()
+Actors: Member, Browser, DB
+Preconditions:
+ - user owns a certificate that is enabled for login and installed in his browser
+ - user is not logged in (%loggedin=0)
+Short-Description:
+ - the user uses this certificate to login into the secure subdomain.
+Description:
+<DIAGRAM>
+#1:
+ - the system checks if the certificate is valid
+   - Checks if the certificate is already valid and not expired yet
+   - Checks if the certificate is not revoked
+   - Checks if the certificate chains to a trusted anchor
+Postconditions:
+ - user is logged in (%loggedin=1)
+Special cases:
+ - the certificate is already revoked (id=certLoginPubInvalid, testcase=org.cacert.gigi.TestCertificate.testCertLifeCycle())
+ - the certificate is not yet or no longer valid (id=certLoginPubInvalid)
+ - the certificate is issued by another CA (id=certLoginPubInvalid)
+ - the certificate has wrong KeyUsage Flags (id=certLoginPubInvalid)
+
+ - the certificate is not enabled for login
