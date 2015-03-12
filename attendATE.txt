@@ -1,0 +1,17 @@
+Name: Attend ATE recorded (#attendATE)
+Testcases: 
+Actors: User, SE, ATE Organiser, Browser, DB
+Preconditions:
+Short-Description:
+ - an ATE attendance is recorded as "Training" 
+Description:
+ - the user attends an ATE
+ - the ATE organiser sends a list of attendees to an SE with CARS Statement
+ - the user ensurs that he is a member (TODO: Discussion, Timeout?)
+ - the SE enters the list into the system, non-Members are ignored
+Postconditions:
+ - member can see an ATE-entry for this ATE in the member's list of trainings
+ - SE can see an ATE-entry for this ATE in the member's list of trainings
+Special cases:
+ - the user does not register (#register) before the SE enters the list.
+

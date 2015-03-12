@@ -1,0 +1,16 @@
+Name: Pass CATS (#passCATS)
+Testcases: 
+Actors: CATS System, DB
+Preconditions:
+ - There is a Member
+ - The member has passed the CATS Test on the CATS system
+Short-Description:
+ - The passed test gets entered into the users trainings table
+Description:
+ - the CATS system authenticates itself via client certificate to use the API
+ - the CATS system sends its un-uploaded test results, where the user is specified by his certificate serialnumber
+ - the completed test gets entered into the trainings table
+Postconditions:
+ - member can see the CATS-entry for this passed CATS test in the member's list of trainings
+ - SE can see the CATS-entry for this passed CATS test in the member's list of trainings
+Special cases:

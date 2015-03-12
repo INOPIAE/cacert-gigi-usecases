@@ -1,0 +1,11 @@
+Name: Lookup Trainings (#lookupTrainings)
+Testcases: 
+Actors: Member, Browser, DB
+Preconditions: user is logged in (%loggedin=1)
+Short-Description:
+ - a member wants to see his passed trainings
+Description:
+ - the member opens the "Trainings"-Subpage
+Postconditions:
+ - the member sees a list of all his absolved trainings
+Special cases:
