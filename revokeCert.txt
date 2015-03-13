@@ -1,0 +1,18 @@
+Name: Revoke Certificate (#revokeCert)
+Testcases: org.cacert.gigi.TestCertificate.testCertLifeCycle()
+Actors: Member, Cassiopeia, Browser, DB
+Preconditions:
+ - member is logged in (%loggedin=1)
+ - member has a not revoked certificate in his account
+Short-Description:
+ - the member revokes one of his certificates
+Description:
+ - the member navigates to the page, displaying his certificates
+ - the member checks the certificate, he wishes to revoke
+ - the certificate is marked for revokation
+ - cassiopeia revokes the certificate and updates CRLs
+ - gigi returns a page indicating success
+Postconditions:
+ - the certificate is revoked and therefore on its corresponding CRL
+Special cases:
+ - the certificate has already been revoked.

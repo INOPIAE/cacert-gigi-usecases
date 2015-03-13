@@ -421,7 +421,9 @@ after Assurance</panel_attributes>
       <w>170</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>Change Password</panel_attributes>
+    <panel_attributes>Change Password
+//id: changePassword
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

@@ -1,0 +1,17 @@
+Name: Change name before Assurance (#changeName)
+Testcases: org.cacert.gigi.pages.account.TestMyDetailsEdit
+Actors: Member, Browser, DB
+Preconditions:
+ - member has 0 Assurances
+ - member is logged in (%loggedin=1)
+Short-Description:
+ - the member edits his personal Data, that will be protected by assurance
+Description:
+ - the member navigates to the page, displaying his personal details.
+ - the member modifies them.
+ - the member saves them.
+ - the member looks at his modified details
+Postconditions:
+ - the details have been changed
+Special cases:
+ - the user changes his details to an illegal value
