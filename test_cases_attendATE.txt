@@ -1,0 +1,11 @@
+possible test cases for "Attend ATE"
+
+1. Enter entry for an user account
+must be successful
+verify that entry is visible from user account in training history
+verify that entry is visible from SE view for the account training
+
+2. Entry entry for a non member 
+not neccessary as the SE interface does not give a any account handling for non-member
+
+
