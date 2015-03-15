@@ -1,0 +1,23 @@
+Name: Assure (#assure)
+Testcases: org.cacert.gigi.pages.wot.TestAssurance
+Actors: Member, Assurer, Browser, DB
+Preconditions:
+ - member was not previously assured by the assurer
+ - assurer is logged in (%loggedin=1)
+Short-Description:
+ - the assurer assurs the member
+Description:
+ - the assurer locates the member by entering his primary email and date of birth on the "assure someone" page
+ - the assurer verifies all given data
+ - the assurer enters location and date of the assurance
+ - the assurer checks all required checkboxes
+Postconditions:
+ - the member was assured by the assurer and appears the assurers and the members account
+Special cases:
+ - the entered date is invalid (org.cacert.gigi.pages.wot.TestAssurance.testAssureFormInvalDate())
+ - the entered date is in the future (org.cacert.gigi.pages.wot.TestAssurance.testAssureFormFuture())
+ - no date was entered (org.cacert.gigi.pages.wot.TestAssurance.testAssureFormInvalDate())
+ - no location was entered (org.cacert.gigi.pages.wot.TestAssurance.testAssureFormNoLoc())
+ - the user changes his name while beeing assured (org.cacert.gigi.pages.wot.TestAssurance.testAssureFormRaceName())
+ - the user changes his date of birth while beeing assured. (org.cacert.gigi.pages.wot.TestAssurance.testAssureFormRaceDoB())
+ - not all boxes have been checked (org.cacert.gigi.pages.wot.TestAssurance.testAssureFormBoxes())
