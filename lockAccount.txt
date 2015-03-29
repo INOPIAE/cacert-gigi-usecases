@@ -1,0 +1,16 @@
+Name: Lock Account (#lockAccount)
+Testcases: 
+Actors: SE, Browser, DB, Member?
+Preconditions:
+ - SE is logged in
+Short-Description:
+ - SE locks a member account, sub function of account delete
+Description:
+ - SE opens member account
+ - SE adds ticket No to form
+ - SE locks member account
+Postconditions:
+ - member is blocked for login, message is displayed
+ - SE sees ticket No of last locking action 
+Special cases:
+ - SE does not enter ticket No

@@ -1,0 +1,16 @@
+Name: Unlock Account (#unlockAccount)
+Testcases: 
+Actors: SE, Browser, DB, Member?
+Preconditions:
+ - SE is logged in
+Short-Description:
+ - SE unlocks a member account
+Description:
+ - SE opens member account
+ - SE adds ticket No to form
+ - SE unlocks member account
+Postconditions:
+ - member is able to login
+ - SE does not see ticket No of last locking action 
+Special cases:
+ - SE does not enter ticket No
